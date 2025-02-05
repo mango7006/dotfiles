@@ -44,6 +44,8 @@ alias vi="nvim"
 alias neovim="nvim"
 alias vim="nvim"
 
+alias havikpc="ssh hawk@10.123.16.188"
+
 alias shutdown="shutdown now"
 alias reboot="sudo reboot now"
 

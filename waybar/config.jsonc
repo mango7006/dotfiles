@@ -23,6 +23,7 @@
   ],
 
   "modules-right": [
+    // "memory",
     "pulseaudio",
     "custom/paddc",
     // "custom/paddc",
@@ -75,6 +76,10 @@
     }
   },
 
+  "memory": {
+    "format": "{used} GiB",
+  },
+
   "tray": {
     "icon-size": 15,
     "spacing": 8
@@ -98,7 +103,7 @@
   },
 
   "battery": {
-    "interval": 1,
+    "interval": 5,
     "states": {
       "good": 99,
       "warning": 30,
