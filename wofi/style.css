@@ -12,31 +12,31 @@ window {
     border: none;
     color: #d2e3f3;
     font-weight: bold;
-    background-color: #1d242c;
+    background-color: #1F2335;
    	outline: none;
     border-radius: 15px;
     margin: 10px;
     margin-bottom: 2px;
 }
 #input:focus {
-    border: 0px solid #2a333d;
+    border: 0px solid #1F2335;
     margin-bottom: 0px;
 }
 
 #inner-box {
     margin: 7px;
-    border: 10px solid #2a333d;
+    border: 10px solid #24283B;
     color: #d2e3f3;
     font-weight: bold;
-    background-color: #1d242c;
+    background-color: #1F2335;
     border-radius: 15px;
 }
 
 #outer-box {
     margin: 0px;
-    border: none;
+    border: 3px solid #394b70;
     border-radius: 15px;
-    background-color: #2a333d;
+    background-color: #24283B;
 }
 
 #scroll {

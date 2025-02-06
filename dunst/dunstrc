@@ -21,9 +21,9 @@
     # Horizontal padding
     horizontal_padding = 8
     # Width of frame around window
-    frame_width = 1
+    frame_width = 3
     # Color of frame around window
-    frame_color = "#4287f5"
+    frame_color = "#394b70"
     # Sort messages by urgency
     sort = yes
     # Idle seconds
