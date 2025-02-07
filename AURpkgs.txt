@@ -1,7 +1,0 @@
-arcolinux-logout
-clipse
-hyprshot
-sddm-theme-tokyo-night-git
-spotify
-tokyonight-gtk-theme-git
-windows-10-cursor

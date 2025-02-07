@@ -27,6 +27,7 @@ git
 grub
 hyprland
 hyprlock
+hyprpicker
 intel-media-driver
 intel-ucode
 libnotify
@@ -66,6 +67,7 @@ tlp
 ttf-font-awesome
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
+ttf-nerd-fonts-symbols
 udiskie
 ufw
 unzip
@@ -73,6 +75,7 @@ vlc
 waybar
 wezterm
 wget
+wireguard-tools
 wireplumber
 wl-clipboard
 wofi

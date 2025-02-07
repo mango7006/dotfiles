@@ -10,7 +10,6 @@ read -r -p "Do you want to install dependencies and packages? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   echo "Downloading packages"
   sudo pacman -S --needed - <pkglist.txt
-  paru -Syu --needed - <AURpkgs.txt
 else
   echo "Not installing packages"
 fi
