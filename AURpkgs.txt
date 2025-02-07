@@ -1,8 +1,6 @@
 arcolinux-logout
 clipse
 hyprshot
-paru
-paru-debug
 sddm-theme-tokyo-night-git
 spotify
 tokyonight-gtk-theme-git

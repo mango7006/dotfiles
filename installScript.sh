@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gitDir=/home/mango/gits/dotfiles/config
+gitDir=~/gits/dotfiles/config
 conf=~/.config/
 
 echo "Install script for dotfiles"
