@@ -15,3 +15,7 @@ cd dotfiles
 ```bash
 ./installScript.sh
 ```
+
+## Features
+
+

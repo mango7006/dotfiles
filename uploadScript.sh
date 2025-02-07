@@ -2,6 +2,7 @@
 
 source ~/secret.sh
 
+repo_link=mango7006/dotfiles.git
 repo_config=~/gits/dotfiles/config/
 repo_home=~/gits/dotfiles/home/
 repo_scripts=~/gits/dotfiles/scripts
@@ -25,7 +26,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   cd ~/gits/dotfiles/
   git add .
   git commit -m "Script Upload"
-  git push $gittoken@github.com/mango7006/dotfiles.git
+  git push $gittoken@github.com/$repo_link
 else
   echo "Not pushing changes to github"
 fi
