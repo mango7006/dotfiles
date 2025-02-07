@@ -13,5 +13,5 @@ cd dotfiles
 
 Install dependencies
 ```bash
-./installPKGS.sh
+./installScript.sh
 ```

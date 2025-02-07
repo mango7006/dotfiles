@@ -1,9 +1,19 @@
 #!/bin/bash
 
+gitDirHome=~/gits/dotfiles/home
 gitDir=~/gits/dotfiles/config
 conf=~/.config/
 
 echo "Install script for dotfiles"
+
+read -r -p "Do you want to install dependencies and packages? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  echo "Downloading packages"
+  sudo pacman -S --needed - <pkglist.txt
+  paru -Syu --needed - <AURpkgs.txt
+else
+  echo "Not installing packages"
+fi
 
 read -r -p "Do you want to make a backup of your current dotfiles? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -22,3 +32,5 @@ sudo cp -r $gitDir/nvim/ $conf
 sudo cp -r $gitDir/waybar/ $conf
 sudo cp -r $gitDir/wofi/ $conf
 sudo cp $gitDir/starship.toml $conf
+sudo cp $gitDirHome/.wezterm.lua ~
+sudo cp $gitDirHome/.zshrc ~
