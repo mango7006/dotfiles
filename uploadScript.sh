@@ -19,8 +19,6 @@ sudo cp -r ~/.config/nvim/ $repo_config
 sudo cp -r ~/.config/waybar/ $repo_config
 sudo cp -r ~/.config/wofi/ $repo_config
 
-sudo cp ~/script.sh $repo_scripts
-
 read -r -p "Do you want to push to github? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   echo "Pushing to github"
