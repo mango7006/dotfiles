@@ -46,6 +46,9 @@ alias vim="nvim"
 
 alias havikpc="ssh hawk@10.123.16.188"
 
+alias wg-up="sudo wg-quick up wg0"
+alias wg-down="sudo wg-quick down wg0"
+
 alias shutdown="shutdown now"
 alias reboot="sudo reboot now"
 
