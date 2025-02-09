@@ -31,6 +31,7 @@ else
   exit
 fi
 
+sudo cp -r $gitDir/eww/ $conf
 sudo cp -r $gitDir/dunst/ $conf
 sudo cp -r $gitDir/fastfetch/ $conf
 sudo cp -r $gitDir/hypr/ $conf
