@@ -19,6 +19,7 @@ sudo cp -r ~/.config/hypr/ $repo_config
 sudo cp -r ~/.config/nvim/ $repo_config
 sudo cp -r ~/.config/waybar/ $repo_config
 sudo cp -r ~/.config/wofi/ $repo_config
+sudo cp -r ~/.config/eww/ $repo_config
 
 read -r -p "Do you want to push to github? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then

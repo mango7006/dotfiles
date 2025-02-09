@@ -124,12 +124,14 @@
 
   "clock#date": {
     "format": "<span color='#3d59a1' >󰃭 </span>{:%d %b %Y}",
+    "on-click": "/home/mango/.config/eww/scripts/toggle_control_center.sh",
     "tooltip": false,
   },
 
   "clock#time": {
     "format": "<span color='#3d59a1' >󱑂 </span>{:%H:%M}",
     "tooltip": false,
+    "on-click": "/home/mango/.config/eww/scripts/toggle_control_center.sh",
     // "tooltip-format": "Standard Time: {:%I:%M %p}",
     "min-length": 8,
     "max-length": 12
