@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Changing WezTerm color scheme - https://wezfurlong.org/wezterm/colorschemes/index.html
-config.color_scheme = "TokyoNightStorm (Gogh)"
+config.color_scheme = "Gruvbox dark, medium"
 
 -- Change Wezterm Font
 config.font = wezterm.font_with_fallback({

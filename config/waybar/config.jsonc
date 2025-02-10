@@ -1,222 +1,103 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 35,
-  "width": 1910,
-  "spacing": 5,
-  "margin-top" :5,
-  "margin-right" :8,
-  "margin-left" :8,
+  "layer": "bottom",
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["bluetooth", "wireplumber", "network", "battery", "power-profiles-daemon", "backlight", "custom/wlogout"],
 
-  "modules-left": [
-    "custom/rofi",
-    "hyprland/workspaces",
-    "custom/paddc",
-    "custom/paddc",
-    "tray",
-  ],
-
-  "modules-center": [
-    // "mpris",
-    "clock#time",
-    "clock#date",
-  ],
-
-  "modules-right": [
-    // "memory",
-    "pulseaudio",
-    "custom/paddc",
-    // "custom/paddc",
-    "battery",
-    "custom/paddc",
-    "custom/notification",
-    "custom/paddc",
-    "custom/wifi",
-    "custom/paddc",
-    "bluetooth",
-  ],
-
-  "custom/rofi": {
-		"format": "<span color='#7aa2f7' >󰣇</span>",
-		"on-click": "archlinux-logout",
-    "escape" : true,
-    "tooltip" : false
-	},
-
-  // Modules configuration
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "active-only": false,
-    "all-outputs": true,
-    "warp-on-scroll": false,
+  "power-profiles-daemon": {
     "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
     "format-icons": {
-      "1": "<span color='#c3e88d' >󰊠</span>",
-      "2": "<span color='#4fd6be' >󰊠</span>",
-      "3": "<span color='#ff007c' >󰊠</span>",
-      "4": "<span color='#41a6b5' >󰊠</span>",
-      "5": "<span color='#c53b53' >󰊠</span>",
-      "6": "<span color='#689d6a' >󰊠</span>",
-      "7": "<span color='#fe8019' >󰊠</span>",
-      "default": "<span color='#cc241d'>󰊠</span>",
-    },
-    "persistent-workspaces": {
-        "*": 3
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
     }
-  },
-
-  "hyprland/window": {
-    "format": "{class}",
-    "max-length": 20,
-    "rewrite": {
-      "": "<span foreground= '#458588'></span> hyprland",
-      "~": " terminal",
-      "com.mitchellh.ghostty": ">> ghostty",
-      "zen-beta": ">> zen"
-    }
-  },
-
-  "memory": {
-    "format": "{used} GiB",
-  },
-
-  "tray": {
-    "icon-size": 15,
-    "spacing": 8
-  },
-
-  "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "<span color='#fbf1c7' >  </span>{volume}%",
-    "format-muted": "<span color='#fbf1c7' >  </span>{volume}%",
-    "format-bluetooth": "<span color='#fbf1c7' > 󰂰 </span>{volume}%",
-    "format-bluetooth-muted": "<span color='#fbf1c7' > 󰂲 </span>{volume}%",
-    "format-source": "{volume}% ",
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol",
-    "tooltip": false,
-    "max-volume": 130
-  },
-
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-
-  "battery": {
-    "interval": 5,
-    "states": {
-      "good": 99,
-      "warning": 30,
-      "critical": 20
-    },
-    "format-icons": [" "," "," "," "," "],
-    "format": "<span color='#8ec07c' > {icon}</span>{capacity}%",
-    "format-critical": "<span color='#cc241d' > {icon}</span>{capacity}%",
-    "format-warning": "<span color='#d8a657' > {icon}</span>{capacity}%",
-    "format-full": "<span color='#8ec07c' > {icon}</span>{capacity}%",
-    "format-charging": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
-    "format-charging-warning": "<span color='#d8a657' > 󰢝 </span>{capacity}%",
-    "format-charging-critical": "<span color='#cc241d' > 󰢜 </span>{capacity}%",
-    "format-plugged": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
-    "format-alt": "<span color='#8ec07c' > 󱧥 </span>{time}",
-    "tooltip": false
-  },
-
-  "clock#date": {
-    "format": "<span color='#3d59a1' >󰃭 </span>{:%d %b %Y}",
-    "on-click": "/home/mango/.config/eww/scripts/toggle_control_center.sh",
-    "tooltip": false,
-  },
-
-  "clock#time": {
-    "format": "<span color='#3d59a1' >󱑂 </span>{:%H:%M}",
-    "tooltip": false,
-    "on-click": "/home/mango/.config/eww/scripts/toggle_control_center.sh",
-    // "tooltip-format": "Standard Time: {:%I:%M %p}",
-    "min-length": 8,
-    "max-length": 12
-  },
-
-  "custom/backlight": {
-    "exec": "~/.config/waybar/scripts/brightness-control.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
-    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
-    "interval": 1,
-    "min-length": 6,
-    "max-length": 6
-  },
-
-  "custom/paddc": {
-    "format": " ",
-    "tooltip": false,
-  },
-
-  "hyprland/language": {
-    "format": "{}",
-    "format-en": "US",
-  },
-
-  "mpris": {
-    "format": "<span color='#cc241d'> 󰎇  </span>  {artist} - {title}  ",
-    "max-length": 40,
-  },
-
-  "custom/wifi": {
-    "exec": "~/.config/waybar/scripts/wifi-status.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "on-click": "nm-connection-editor",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 12
   },
 
   "bluetooth": {
-    "format": "<span color='#458588'>󰂰 </span>",
-    "format-disabled": "<span color='#458588'>󰂲 </span>",
-    "format-connected": "<span color='#458588'>󰂱 </span>",
-    "format-connected-battery": "<span color='#458588'>󰂱 </span>",
-
-    "tooltip-format": 
-      "{num_connections} connected",
-    "tooltip-format-disabled": 
-      "Bluetooth Disabled",
-    "tooltip-format-connected": 
-      "{num_connections} connected\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
-      "{device_alias}: {device_battery_percentage}%",
-
-    "on-click": "blueman-manager",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 10
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias}",
+    "tooltip-format-connected-battery": "󰥉 {device_battery_percentage}%",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-disabled": "󰂲",
+    "on-click": "uwsm app -- blueman-manager"
   },
 
-  "custom/notification": {
+  "wireplumber": {
     "tooltip": false,
-    "rotate": 0,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "on-click": "uwsm app -- pavucontrol",
+    "on-click-right": "uwsm app -- easyeffects",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    }
+  },
+
+  "network": {
+    "tooltip": false,
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "on-click-right": "XDG_CURRENT_DESKTOP=GNOME uwsm app -- gnome-control-center wifi",
+    "on-click": "uwsm app -- kitty nmtui"
+  },
+
+  "backlight": {
+    "tooltip": false,
+    "format": " {}%",
+    "interval": 1,
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5"
+  },
+
+  "battery": {
+    "states": {
+      "full": 100,
+      "good": 95,
+      "decent": 50,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-time": "{H} h {M} min",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%m-%d-%Y}",
+    "on-click-right": "uwsm app -- gnome-calendar"
+  },
+
+  "custom/launcher": {
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰅸 ",
-      "none": "󰂜 ",
-      "dnd-notification": "󰅸 ",
-      "dnd-none": "󱏨 ",
-      "inhibited-notification": "󰅸 ",
-      "inhibited-none": "󰂜 ",
-      "dnd-inhibited-notification": "󰅸 ",
-      "dnd-inhibited-none": "󱏨 "
+      "default": ""
     },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click-right": "swaync-client -d -sw",
-    "on-click": "swaync-client -t -sw",
-    "escape": true
+    "on-click": "uwsm app -- nwg-drawer -nofs -closebtnleft -closebtn"
+  },
+
+  "custom/wlogout": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "⏻"
+    },
+    "on-click": "uwsm app -- wlogout"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    },
+    "sort-by-number": true
   }
 }
