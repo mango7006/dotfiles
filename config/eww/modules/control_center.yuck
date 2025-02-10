@@ -1,11 +1,10 @@
 (defwidget control_center []
-    (revealer :transition "slideleft" :reveal {open_control_center} :duration {ANIM_DURATION}
+    (revealer :transition "slidedown" :reveal {open_control_center} :duration 1
         (box :orientation "v" :space-evenly false
             (music)
             (box :orientation "v" :space-evenly false :class "control-center"
                 (user)
                 (quick_settings)
-                (volume_control_center)
             )
         )
     )
